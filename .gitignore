@@ -132,4 +132,7 @@ doc/_build/
 
 # Benchmark data files
 benchmarks/data/**
+
+benchmarks/results/**
 !benchmarks/data/.gitkeep
+!benchmarks/results/.gitkeep
