@@ -133,5 +133,3 @@ doc/_build/
 benchmarks/data/**
 
 benchmarks/results/**
-!benchmarks/data/.gitkeep
-!benchmarks/results/.gitkeep
