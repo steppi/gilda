@@ -418,19 +418,6 @@ class BioIDBenchmarker:
         return famplex.isa('HGNC', hgnc_id, 'FPLX', fplx_id)
 
     def isa(self, curie_1: str, curie_2: str) -> bool:
-        """True if id1 satisfies isa relationship with id2."""
-        # if curie_1.startswith('MESH') and curie_2.startswith('MESH'):
-        #     return mesh_isa(curie_1, curie_2)
-        # # Handle GOGO problem
-        # elif curie_1.startswith('GO') and curie_2.startswith('GO'):
-        #     curie_1 = curie_1.split(':', maxsplit=1)[1]
-        #     curie_2 = curie_2.split(':', maxsplit=1)[1]
-        #     try:
-        #         return nx.has_path(self.godag, curie_1, curie_2)
-        #     except Exception:
-        #         return False
-        # else:
-        #     return curie_1 in self.isa_relations and curie_2 in self.isa_relations[curie_1]
         ns1, id1 = curie_1.split(':', maxsplit=1)
         ns2, id2 = curie_2.split(':', maxsplit=1)
         # TODO did we need to keep some processing on the IDs?
